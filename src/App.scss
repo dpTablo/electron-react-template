@@ -1,0 +1,13 @@
+$defaultButtonColor: yellow;
+
+.testButton {
+	width: 200px;
+	height: 200px;
+	background-color: $defaultButtonColor;
+	border: 2px dotted black;
+	font-size: 15pt;
+}
+
+.testImage {
+	width: 100px;
+}
