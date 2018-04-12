@@ -1,0 +1,35 @@
+{
+	// IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+	// 기존 특성에 대한 설명을 보려면 가리킵니다.
+	// 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "chrome",
+			"request": "attach",
+			"name": "attach webpack-dev-server",
+			"url": "http://localhost:3000/public",
+			"webRoot": "${workspaceFolder}",
+			"port": 9222,
+			"sourceMaps": true,
+			"sourceMapPathOverrides": {
+				"webpack:///./*": "${webRoot}/*",
+				"webpack:///src/*": "${webRoot}/*",
+				"webpack:///*": "*",
+				"webpack:///./~/*": "${webRoot}/node_modules/*",
+				"meteor://💻app/*": "${webRoot}/*"
+			}
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch electron",
+			"program": "${workspaceFolder}/main.js",
+			"runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+			"protocol": "inspector",
+			"runtimeArgs": [
+				"--remote-debugging-port=9223"
+			]
+		}
+	]
+}

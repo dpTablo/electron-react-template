@@ -1,0 +1,12 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "webpack-dav-server",
+			"type": "shell",
+			"command": "webpack-dev-server --host 0.0.0.0 --port 3000 --config=./webpack.dev.config.js --output-public-path=/public/"
+		}
+	]
+}
