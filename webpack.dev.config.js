@@ -18,10 +18,11 @@ module.exports = {
 		hot: true
 	},
 	plugins: [
+		new webpack.NamedModulesPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new CopyWebpackPlugin([
 			{ from: './src/index.html' }
-		])
+		])  
 	],
 	module: {
 		rules: [
